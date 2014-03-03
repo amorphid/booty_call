@@ -13,3 +13,7 @@ gem "uglifier", "2.4.0"
 group :doc do
   gem "sdoc", "0.4.0", require: false
 end
+
+group :development, :test do
+  gem "rspec-rails", "2.14.1"
+end
