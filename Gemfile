@@ -22,8 +22,9 @@ end
 
 group :development, :test do
   gem "capybara", "2.2.1"
-  gem "fabrication", "2.9.6"
   gem "database_cleaner", "1.2.0"
+  gem "fabrication", "2.9.6"
+  gem "faker", "1.2.0"
   gem "poltergeist", "1.5.0"
   gem "rspec-rails", "2.14.1"
   gem "shoulda-matchers", "2.3.0"
