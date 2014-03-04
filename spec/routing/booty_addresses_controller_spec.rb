@@ -11,7 +11,7 @@ describe BootyAddressesController do
   it do
     should route(:get, "/booty_addresses/1").to(
       controller: "booty_addresses",
-      action: "create",
+      action: "show",
       id: 1
     )
   end
