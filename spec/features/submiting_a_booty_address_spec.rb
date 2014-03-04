@@ -7,10 +7,9 @@ feature "Submitting a booty address" do
 
   scenario "displays failure message if input invalid" do
     click_button("Submit")
-    expect(page.body).to have_content("street1 can't be blank")
-    expect(page.body).to have_content("apt_numer can't be blank")
-    expect(page.body).to have_content("city  can't be blank")
-    expect(page.body).to have_content("state can't be blank")
-    expect(page.body).to have_content("zip can't be blank")
+    expect(page.body).to have_content("Street1 can't be blank")
+    expect(page.body).to have_content("City  can't be blank")
+    expect(page.body).to have_content("State can't be blank")
+    expect(page.body).to have_content("Zip can't be blank")
   end
 end
