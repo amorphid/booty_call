@@ -23,12 +23,12 @@ describe BootyAddressesController do
     end
 
     it "sets @booty_address with invalid input" do
-      post :create
+      post :create, booty_address: {}
       expect(assigns[:booty_address]).to be_instance_of(BootyAddress)
     end
 
     it "does not create booty address with invalid input" do
-      post :create
+      post :create, booty_address: {}
       expect(BootyAddress.count).to eq(0)
     end
   end
