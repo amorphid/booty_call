@@ -1,3 +1,3 @@
 BootyCall::Application.routes.draw do
-  resources :booty_addresses, only: :new
+  resources :booty_addresses, only: [:create, :new]
 end
