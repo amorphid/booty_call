@@ -14,8 +14,12 @@ describe BootyAddressesController do
       expect(assigns[:booty_address]).to be_instance_of(BootyAddress)
     end
 
+    it "does not create booty address with invalid input" do
+      post :create
+      expect(BootyAddress.count).to eq(0)
+    end
+
     it "redirects to #show"
     it "creates booty with valid input"
-    it "does not create boot with invalid input"
   end
 end
