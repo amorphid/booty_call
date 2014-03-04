@@ -8,6 +8,14 @@ describe BootyAddressesController do
     end
   end
 
+  context "GET show" do
+    it "sets @booty_address" do
+      b = Fabricate(:booty_address)
+      get :show, id: b.id
+      expect(assigns[:booty_address]).to eq(b)
+    end
+  end
+
   context "POST create" do
     it "sets @booty_address with valid input" do
       b = Fabricate.attributes_for(:booty_address)
