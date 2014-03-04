@@ -7,4 +7,11 @@ describe BootyAddressesController do
       action: "new"
     )
   end
+
+  it do
+    should route(:post, "/booty_addresses").to(
+      controller: "booty_addresses",
+      action: "create"
+    )
+  end
 end
