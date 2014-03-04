@@ -15,6 +15,13 @@ describe BootyAddressesController do
       expect(BootyAddress.find_by(b).attributes).to include(b)
     end
 
+    it "redirects to #show with valid input" do
+      b = Fabricate.attributes_for(:booty_address)
+      post :create, booty_address: b
+      expect(response).to redirect_to(
+        booty_address_path(BootyAddress.find_by(b)))
+    end
+
     it "sets @booty_address with invalid input" do
       post :create
       expect(assigns[:booty_address]).to be_instance_of(BootyAddress)
@@ -24,7 +31,5 @@ describe BootyAddressesController do
       post :create
       expect(BootyAddress.count).to eq(0)
     end
-
-    it "redirects to #show"
   end
 end
