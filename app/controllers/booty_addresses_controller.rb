@@ -13,6 +13,10 @@ class BootyAddressesController < ApplicationController
     @booty_address = BootyAddress.new
   end
 
+  def show
+    @booty_address = BootyAddress.find(params[:id])
+  end
+
   private
 
   def params_booty_address
