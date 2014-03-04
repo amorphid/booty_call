@@ -1,0 +1,2 @@
+class BootyAddressesController < ApplicationController
+end
