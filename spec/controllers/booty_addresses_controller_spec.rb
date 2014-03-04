@@ -9,6 +9,12 @@ describe BootyAddressesController do
   end
 
   context "POST create" do
+    it "sets @booty_address with valid input" do
+      b = Fabricate.attributes_for(:booty_address)
+      post :create, booty_address: b
+      expect(assigns[:booty_address]).to be_instance_of(BootyAddress)
+    end
+
     it "creates booty with valid input" do
       b = Fabricate.attributes_for(:booty_address)
       post :create, booty_address: b
