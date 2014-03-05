@@ -1,0 +1,13 @@
+//= require jquery.live_address
+
+  jQuery.LiveAddress({
+    key: <%= ENV["LIVEADDRESS_AUTH_TOKEN"] %>,
+    debug: true,
+    addresses: [{
+      street: "#booty_address_street1",
+      secondary: "#booty_address_apt_number",
+      city:  "#booty_address_city",
+      state: "#booty_address_state",
+      zipcode: "#booty_address_zip"
+    }]
+  });

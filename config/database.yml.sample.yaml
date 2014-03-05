@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: booty_call_development
+  pool: 5
+  username: booty_call
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: booty_call_test
+  pool: 5
+  username: booty_call
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: booty_call_production
+  pool: 5
+  username: booty_call
+  password:
