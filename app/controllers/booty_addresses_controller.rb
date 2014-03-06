@@ -11,6 +11,7 @@ class BootyAddressesController < ApplicationController
   end
 
   def new
+    gon.liveAddressAuthToken = ENV["live_address_auth_token"]
     @booty_address = BootyAddress.new
   end
 
