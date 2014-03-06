@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby "2.1.1"
 
 gem "coffee-rails", "4.0.1"
+gem "figaro", "0.7.0"
 gem "jbuilder", "1.5.3"
 gem "jquery-rails", "3.1.0"
 gem "pg", "0.17.1"
