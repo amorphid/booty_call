@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20140304030224) do
 
   create_table "booty_addresses", force: true do |t|
     t.string   "street1"
-    t.string   "apt_number"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
@@ -26,7 +25,11 @@ ActiveRecord::Schema.define(version: 20140304030224) do
     t.datetime "updated_at"
   end
 
+  add_index "booty_addresses", ["city"], name: "index_booty_addresses_on_city", using: :btree
   add_index "booty_addresses", ["created_at"], name: "index_booty_addresses_on_created_at", using: :btree
+  add_index "booty_addresses", ["state"], name: "index_booty_addresses_on_state", using: :btree
+  add_index "booty_addresses", ["street1"], name: "index_booty_addresses_on_street1", using: :btree
   add_index "booty_addresses", ["updated_at"], name: "index_booty_addresses_on_updated_at", using: :btree
+  add_index "booty_addresses", ["zip"], name: "index_booty_addresses_on_zip", using: :btree
 
 end

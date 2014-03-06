@@ -1,11 +1,17 @@
 class CreateBootyAddress < ActiveRecord::Migration
   def change
     create_table :booty_addresses do |t|
-      t.string :street1, index: true
-      t.string :apt_number, index: true
-      t.string :city, index: true
-      t.string :state, index: true
-      t.string :zip, index: true
+      t.string :street1
+      t.index  :street1
+
+      t.string :city
+      t.index  :city
+
+      t.string :state
+      t.index  :state
+
+      t.string :zip
+      t.index  :zip
 
       t.timestamps
 

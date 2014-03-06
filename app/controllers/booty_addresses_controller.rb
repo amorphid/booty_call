@@ -22,7 +22,6 @@ class BootyAddressesController < ApplicationController
 
   def params_booty_address
     params[:booty_address].permit(
-      :apt_number,
       :city,
       :state,
       :street1,

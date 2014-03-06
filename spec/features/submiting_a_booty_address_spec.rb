@@ -6,7 +6,6 @@ feature "Submitting a booty address" do
   scenario "displays success message if input valid" do
     b = Fabricate.attributes_for(:booty_address)
     fill_in :booty_address_street1,    with: b[:street1]
-    fill_in :booty_address_apt_number, with: b[:apt_number]
     fill_in :booty_address_city,       with: b[:city]
     fill_in :booty_address_state,      with: b[:state]
     fill_in :booty_address_zip,        with: b[:zip]
